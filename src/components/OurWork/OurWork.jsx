@@ -21,14 +21,14 @@ const OurWork = () => {
   return (
     <section id="projects">
       <div className="container">
-      <div className="hiw-head">
+      <div className="hiw-head  our-work-head ">
                     <motion.span 
                     variants={tagVariants}
                     initial='offscreen'
                     whileInView={"onscreen"}
                     className='tag'
                     >
-                        How it works
+                        Our Works
                     </motion.span>
                     <motion.span 
                     variants={titleVariants}
