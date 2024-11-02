@@ -79,6 +79,11 @@ export const ourDiffFeatures = [
     title: "Web Application Development",
     des: "Delivering efficient, scalable web applications tailored to meet your unique business needs.",
   },
+  {
+    icon: "/service/Frame4.png",
+    title: "Web Application Development",
+    des: "Delivering efficient, scalable web applications tailored to meet your unique business needs.",
+  },
 ];
 
 export const hitFeatures = [

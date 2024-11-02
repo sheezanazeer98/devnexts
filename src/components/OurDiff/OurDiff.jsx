@@ -45,7 +45,7 @@ const OurDiff = () => {
                             initial="offscreen"
                             whileInView="onscreen"
                             key={i} className='od-feature'>
-                                <Image src={feature.icon} alt="feature" width={80} height={80} />
+                                <Image src={feature.icon} alt="feature" width={50} height={50} />
                                 <span className='sec-title'>{feature.title}</span>
                                 <span className='text'>{feature.des}</span>
                             </motion.div>

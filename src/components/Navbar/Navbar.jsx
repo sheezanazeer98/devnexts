@@ -26,20 +26,20 @@ const Navbar = () => {
             <div className="n-container">
                 {/* left side */}
                 <div className="n-logo">
-                    <img src="/logo.png" alt="logo"   width= {130} height = {80} />
+                    <img src="/logo2.png" alt="logo"   width= {130} height = {80} />
                 </div>
 
                 {/* right side */}
                 <div className="n-right">
                     <div className="n-menu">
                         <Link to="wwd-wrapper" spy={true} smooth={true} >
-                            <span>What we do</span>
+                        <span>Our Values</span>
                         </Link>
                         <Link to="hiw-wrapper" spy smooth offset={100} >
-                            <span>How it works</span>
+                        <span>What we do</span>
                         </Link>
                         <Link to="wwi-wrapper" spy smooth >
-                            <span>Who we invest in</span>
+                            <span>How it works</span>
                         </Link>
                         <Link to="t-wrapper" spy smooth offset={100} >
                             <span>Testimonials</span>
@@ -55,7 +55,7 @@ const Navbar = () => {
         {/* mobile version */}
         <div className="nm-container">
             {/* logo */}
-            <span>COTEK TECH</span>
+            <img src="/logo2.png" alt="logo"   width= {80} height = {50} />
 
             {/* menu icon */}
             {
@@ -74,8 +74,8 @@ const Navbar = () => {
             <div className="nm-menu"
             style={{transform: mobileMenuOpened && "translateX(0%)"}}
             >
+                <span>Our Values</span>
                 <span>What we do</span>
-                <span>How it works</span>
                 <span>Who we invest in</span>
                 <span>Testimonials</span>
                 <div className="m-funded-button">

@@ -1,5 +1,5 @@
 .h-wrapper {
-    background-color: var(--secondary-color);
+    background-color: #fff;
     height: 120vh;
     overflow: hidden;
 }
@@ -79,7 +79,13 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    color: var(--light-bg);
+    /* color: var(--light-bg); */
+    color : var(--secondary-color);
+
+    /* background: linear-gradient(90deg, #00D32E, #02B6FE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+
     font-size: 3.5rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -90,7 +96,7 @@
 }
 
 .h-description {
-    color: white;
+    color: gray;
     font-size: 1.4rem;
     line-height: 2rem;
 }
