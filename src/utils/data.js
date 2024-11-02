@@ -61,7 +61,7 @@ export const features = [
 export const ourDiffFeatures = [
   {
     icon: "/service/Frame1.png",
-    title: "App Application Development",
+    title: "Mobile Application Development",
     des: "Crafting intuitive, high-performance mobile apps that elevate user engagement and drive business growth.",
   },
   {
@@ -80,9 +80,9 @@ export const ourDiffFeatures = [
     des: "Delivering efficient, scalable web applications tailored to meet your unique business needs.",
   },
   {
-    icon: "/service/Frame4.png",
-    title: "Web Application Development",
-    des: "Delivering efficient, scalable web applications tailored to meet your unique business needs.",
+    icon: "/service/Frame5.png",
+    title: "AI/ML/CV/ChatGPT",
+    des: "Boost productivity and accuracy with custom AI solutions, freeing you to focus on profit-driving decisions.",
   },
 ];
 

@@ -11,6 +11,7 @@ import HowItWorks from '@/src/components/HowItWorks/HowItWorks';
 import WhoWeInvest from '@/src/components/WhoWeInvest/WhoWeInvest';
 import Testimonials from '@/src/components/Testimonials/Testimonials';
 import Footer from '@/src/components/Footer/Footer';
+import OurWork from '@/src/components/OurWork/OurWork';
 
 export default function Home() {
 
@@ -49,9 +50,10 @@ export default function Home() {
       viewport={{amount: 0.4}}
       >
         <WhoWeInvest />
+      <OurWork/>
       </motion.div>
-
       <Testimonials />
+
       <Footer />
     </motion.div>
   );

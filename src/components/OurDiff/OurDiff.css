@@ -27,7 +27,7 @@
 
 .od-features {
     display: flex;
-    gap: 2rem;
+    gap: 0.5rem;
 }
 
 .od-feature {
