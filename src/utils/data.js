@@ -191,17 +191,6 @@ export const testimonialsData = [
 
 export const projectsData = [
   {
-    id: "Reetro",
-    carouselImages: [
-      "https://www.upwork.com/att/download/portfolio/persons/uid/1515299465624674304/profile/projects/files/8099b370-2ed4-4aba-bad1-adca5c0e94d4",
-    ],
-    projectSite: "https://www.reetro.io/",
-    projectTitle: "Reetro.io",
-    projectSlogan: "Project Management Tool",
-    projectDescription:
-      "Reetro.io is a project management tool inspired by platforms like Jira and ClickUp, providing a full-stack solution to help teams manage projects, track tasks, collaborate, and monitor progress. With a React.js frontend and Node.js backend, the platform offers features like task management, Kanban boards, sprint planning, real-time notifications, and reports.",
-  },
-  {
     id: "OneMint",
     carouselImages: [
       "https://www.upwork.com/att/download/portfolio/persons/uid/1515299465624674304/profile/projects/files/2308e2fb-cf69-4216-b3f0-8f9a01612fee",
@@ -212,6 +201,18 @@ export const projectsData = [
     projectDescription:
       "OneMint.io is a platform designed to create a Mint-like NFT marketplace that allows users to mint, buy, and sell NFTs. Built using Next.js for the frontend and NestJS for backend logic, the marketplace integrates with MetaMask to handle cryptocurrency transactions. Smart contracts written in Solidity are deployed on Ethereum or Binance Smart Chain, handling the minting, transferring, and tracking of NFTs. Users can mint NFTs following ERC-721 or ERC-1155 standards, with metadata stored on decentralized storage platforms like IPFS or Filecoin.",
   },
+  {
+    id: "Reetro",
+    carouselImages: [
+      "https://www.upwork.com/att/download/portfolio/persons/uid/1515299465624674304/profile/projects/files/8099b370-2ed4-4aba-bad1-adca5c0e94d4",
+    ],
+    projectSite: "https://www.reetro.io/",
+    projectTitle: "Reetro.io",
+    projectSlogan: "Project Management Tool",
+    projectDescription:
+      "Reetro.io is a project management tool inspired by platforms like Jira and ClickUp, providing a full-stack solution to help teams manage projects, track tasks, collaborate, and monitor progress. With a React.js frontend and Node.js backend, the platform offers features like task management, Kanban boards, sprint planning, real-time notifications, and reports.",
+  },
+
   {
     id: "DWORK",
     carouselImages: [

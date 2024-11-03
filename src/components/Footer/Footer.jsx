@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import EmailBox from '../EmailBox/EmailBox';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
+import { FaTwitter, FaDiscord, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-scroll'
 
 const Footer = () => {
@@ -19,19 +19,19 @@ const Footer = () => {
           {/* Right Side: Contact Information and Social Icons */}
           <div className="right-content">
             <div className="contact-box">
-              <p> Email Us: <span> contact@devnexts.com </span>  </p>
+              <p>          Email Us:               <a href="mailto:contact@devnexts.com?subject=IT%20Company%20Inquiry%20-%20Starting%20a%20Project"> contact@devnexts.com     </a>          </p>
               <div className="social-icons">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/company/dev-nexts" target="_blank" rel="noopener noreferrer">
                   <FaLinkedinIn />
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <a href="#" target="_blank" rel="noopener noreferrer">
                   <FaTwitter />
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                  <FaInstagram />
-                </a>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+                <a href="#" target="_blank" rel="noopener noreferrer">
                   <FaYoutube />
+                </a>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <FaDiscord />
                 </a>
               </div>
             </div>
