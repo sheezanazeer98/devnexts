@@ -5,12 +5,11 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { email } = req.body;
 
-
     try {
 
       // Authenticate with Google Sheets
       const auth = new google.auth.GoogleAuth({
-       
+        credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS),       
         scopes: 'https://www.googleapis.com/auth/spreadsheets',
       });
 
