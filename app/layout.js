@@ -54,7 +54,8 @@ export default function RootLayout({ children }) {
         {/* SEO Keywords */}
         <meta name="keywords" content="DevNexts, IT agency, software solutions, AI, blockchain, cloud technology, web development, business growth, scalable applications, innovative technology, secure solutions, custom software, digital transformation, tech consulting" />
         <meta name="keywords" content="DevNexts, DevNexts AI, DevNexts blockchain, blockchain DevNexts, DevNexts cloud, DevNexts web solutions, DevNexts software, DevNexts IT agency, DevNexts digital transformation, DevNexts tech solutions, DevNexts software development, DevNexts consulting, DevNexts innovation, DevNexts scalable applications, DevNexts custom software, DevNexts AI solutions, DevNexts blockchain solutions, DevNexts cloud technology, DevNexts web development, DevNexts business growth, DevNexts enterprise solutions, DevNexts SaaS, DevNexts application development, DevNexts secure solutions, DevNexts digital business transformation, DevNexts data-driven solutions, DevNexts emerging technologies, DevNexts machine learning, DevNexts decentralized applications, DevNexts cloud migration, DevNexts IT consulting, DevNexts end-to-end development, DevNexts startup software, DevNexts custom app development, DevNexts DevOps services, DevNexts cloud infrastructure, DevNexts software for SMEs" />
-
+       
+        <meta name="google-site-verification" content="59rHIuL5ZP95DNko1Go3HH4H307tND6-STqM0awxA-w" />
 
         {/* Additional SEO Meta Tags */}
         <meta name="robots" content="index, follow" />
