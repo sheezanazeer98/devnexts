@@ -1,22 +1,24 @@
 import { google } from 'googleapis';
-import { gcre } from '@/credentials';
+
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { email } = req.body;
 
+   console.log(JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS));
+
     try {
 
       // Authenticate with Google Sheets
       const auth = new google.auth.GoogleAuth({
-        credentials: gcre,
+        credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS),
         scopes: 'https://www.googleapis.com/auth/spreadsheets',
       });
 
 
       const sheets = google.sheets({ version: 'v4', auth });
 
-      const spreadsheetId = "1-07Xzz-tdUtTIGfd3mTGJszOBnGpz_TWIShWgTWVQPE";
+      const spreadsheetId = process.env.GOOGLE_SHEET_ID;
       const range = 'Sheet1!A:B'; 
    
       // Appending email and timestamp to the sheet
