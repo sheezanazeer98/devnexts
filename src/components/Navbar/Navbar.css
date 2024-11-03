@@ -65,6 +65,12 @@
     background: linear-gradient(90deg, #00D32E, #02B6FE);
 }
 
+.fund-button a {
+text-decoration : none;
+font-size: 1rem;
+color: var(--light-bg);
+}
+
 .nm-container {
     display: none;
 }
@@ -104,10 +110,11 @@
         height: calc(100vh - 3.8rem);
     }
 
-    .nm-menu span {
+    .nm-menu a  {
         margin-bottom: 2rem;
         padding-bottom: 1rem;
         border-bottom: 1px solid rgb(174, 173, 173);
+
     }
 
     .m-funded-button {
@@ -121,5 +128,13 @@
         padding: 1rem 0rem;
         border-radius: 999px;
         color: var(--light-bg);
+    }
+
+
+    .m-funded-button a  {
+      text-decoration : none;
+font-size: 1rem;
+color: var(--light-bg);
+margin: 0;
     }
 }

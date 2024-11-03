@@ -4,14 +4,14 @@ import Navbar from '@/src/components/Navbar/Navbar';
 import './page.css'
 import Hero from '@/src/components/Hero/Hero';
 import BrandingVideo from '@/src/components/BrandingVideo/BrandingVideo';
-import WhatWeDo from '@/src/components/WhatWeDo/WhatWeDo';
-import OurDiff from '@/src/components/OurDiff/OurDiff';
+import OurValues from '@/src/components/OurValues/OurValues';
 import { motion, useAnimation } from 'framer-motion';
 import HowItWorks from '@/src/components/HowItWorks/HowItWorks';
 import WhoWeInvest from '@/src/components/WhoWeInvest/WhoWeInvest';
 import Testimonials from '@/src/components/Testimonials/Testimonials';
 import Footer from '@/src/components/Footer/Footer';
 import OurWork from '@/src/components/OurWork/OurWork';
+import WhatWeDo from '@/src/components/WhatWeDo/WhatWeDo';
 
 export default function Home() {
 
@@ -22,7 +22,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <BrandingVideo />
-      <WhatWeDo />
+      <OurValues />
       <motion.div
       onViewportEnter={()=> 
         controls.start({
@@ -34,7 +34,7 @@ export default function Home() {
       })}
       viewport={{amount: 0.4}}
       >
-        <OurDiff />
+        <WhatWeDo />
       </motion.div>
       <HowItWorks />
 

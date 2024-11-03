@@ -1,119 +1,61 @@
-"use client";
-
-import React from "react";
-import "./WhatWeDo.css";
-import { features } from "@/src/utils/data";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import {
-  containerVariants,
-  desVariants,
-  tagVariants,
-  titleVariants,
-} from "@/src/utils/animation";
-import {
-  FaUsers,
-  FaStar,
-  FaCalendarAlt,
-  FaCheckCircle,
-} from "react-icons/fa";
+import React from 'react'
+import './WhatWeDo.css'
+import { ourDiffFeatures } from '@/src/utils/data'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+import { containerVariants, desVariants, tagVariants, titleVariants } from '@/src/utils/animation'
 
 const WhatWeDo = () => {
   return (
-    <div className="wwd-wrapper">
-      <div className="container">
-        <div className="wwd-container">
-          {/* head of section */}
-          <div className="wwd-head">
-            <motion.span
-              initial="offscreen"
-              whileInView={"onscreen"}
-              variants={tagVariants}
-              className="tag"
-            >
-              Our Value
-            </motion.span>
-            <motion.span
-              initial="offscreen"
-              whileInView={"onscreen"}
-              variants={titleVariants}
-              className="title"
-            >
-              {" "}
-              Empowering Founders with Non-Dilutive Capital and Proven Execution Excellence
-            </motion.span>
-            <motion.span
-              initial="offscreen"
-              whileInView={"onscreen"}
-              variants={desVariants}
-              className="des"
-            >
-            Here’s How We Make a Difference
-            </motion.span>
-          </div>
-
-          {/* two blocks */}
-          <div className="wwd-blocks">
-            {/* first block */}
-            <div className="wwd-block">
-              <div className="block-features">
-                <motion.div
-                  initial="offscreen"
-                  whileInView={"onscreen"}
-                  variants={containerVariants((1 + 1) * 0.1)}
-                  className="block-feature"
-                >
-                  <span>
-                    {" "}
-                    <FaCalendarAlt size={30} />{" "}
-                  </span>
-                  <span>7+ </span>
-                  <span> Years of Experience</span>
-                </motion.div>
-
-                <motion.div
-                  initial="offscreen"
-                  whileInView={"onscreen"}
-                  variants={containerVariants((1 + 1) * 0.1)}
-                  className="block-feature"
-                >
-                  <span>
-                    {" "}
-                    <FaUsers size={30} />{" "}
-                  </span>
-                  <span>30+ </span> <span> Team <br/> Members</span>
-                </motion.div>
-                <motion.div
-                  initial="offscreen"
-                  whileInView={"onscreen"}
-                  variants={containerVariants((1 + 1) * 0.1)}
-                  className="block-feature"
-                >
-                  <span>
-                    {" "}
-                    <FaCheckCircle size={30} />{" "}
-                  </span>
-                  <span>150+ </span> <span> Projects Completed</span>
-                </motion.div>
-                <motion.div
-                  initial="offscreen"
-                  whileInView={"onscreen"}
-                  variants={containerVariants((1 + 1) * 0.1)}
-                  className="block-feature"
-                >
-                  <span>
-                    {" "}
-                    <FaStar size={30} />{" "}
-                  </span>
-                  <span>High </span> <span> Client Satisfaction</span>
-                </motion.div>
-              </div>
+    <div className="od-wrapper">
+        <div className="container">
+            <div className="od-container">
+                {/* head */}
+                <div className="od-head">
+                    <motion.span 
+                    variants={tagVariants}
+                    initial="offscreen"
+                    whileInView={"onscreen"}
+                    className='tag'>
+                        What We Do
+                    </motion.span>
+                    <motion.span 
+                    variants={titleVariants}
+                    initial="offscreen"
+                    whileInView={"onscreen"}
+                    className='title
+                    '>
+                        Effortless innovation, tailored solutions.
+                    </motion.span>
+                    <motion.span 
+                    variants={desVariants}
+                    initial="offscreen"
+                    whileInView={"onscreen"}
+                    className='text'>
+                     Our mission is to empower your digital transformation with cutting-edge technology.
+                        <br /> We deliver expert web, mobile, blockchain, and DevOps solutions that are flexible, efficient, and designed to drive your success.
+                    </motion.span>
+                </div>
+                {/* features */}
+                <div className="od-features">
+                    {
+                        ourDiffFeatures.map((feature, i)=> (
+                            <motion.div 
+                            variants={containerVariants((i + 1) * 0.1)}
+                            initial="offscreen"
+                            whileInView="onscreen"
+                            key={i} className='od-feature'>
+                                <Image src={feature.icon} alt="feature" width={50} height={50} />
+                                <span className='sec-title'>{feature.title}</span>
+                                <span className='text'>{feature.des}</span>
+                            </motion.div>
+                        ))
+                    }
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  );
-};
+  )
+}
 
-export default WhatWeDo;
+export default WhatWeDo

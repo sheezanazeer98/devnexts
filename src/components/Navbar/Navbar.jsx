@@ -35,18 +35,18 @@ const Navbar = () => {
                         <Link to="wwd-wrapper" spy={true} smooth={true} >
                         <span>Our Values</span>
                         </Link>
-                        <Link to="hiw-wrapper" spy smooth offset={100} >
+                        <Link to="od-wrapper" spy smooth offset={100} >
                         <span>What we do</span>
                         </Link>
-                        <Link to="wwi-wrapper" spy smooth >
+                        <Link to="hiw-wrapper" spy smooth >
                             <span>How it works</span>
                         </Link>
-                        <Link to="t-wrapper" spy smooth offset={100} >
-                            <span>Testimonials</span>
+                        <Link to="projects" spy smooth offset={100} >
+                            <span>Our Projects</span>
                         </Link>
                     </div>
                     <div className="fund-button">
-                    START NOW
+                    <a href="mailto:contact@devnexts.com?subject=IT%20Company%20Inquiry%20-%20Starting%20a%20Project">Start Project</a>
                     </div>
                 </div>
             </div>
@@ -74,12 +74,21 @@ const Navbar = () => {
             <div className="nm-menu"
             style={{transform: mobileMenuOpened && "translateX(0%)"}}
             >
-                <span>Our Values</span>
-                <span>What we do</span>
-                <span>Who we invest in</span>
-                <span>Testimonials</span>
+                        <Link to="wwd-wrapper"       onClick={() => setMobileMenuOpened(false)}spy={true} smooth={true} >
+                        <span>Our Values</span>
+                        </Link>
+                        <Link to="od-wrapper"         onClick={() => setMobileMenuOpened(false)} spy smooth offset={100} >
+                        <span>What we do</span>
+                        </Link>
+                        <Link to="hiw-wrapper"        onClick={() => setMobileMenuOpened(false)}  spy smooth >
+                            <span>How it works</span>
+                        </Link>
+                        <Link to="projects" spy        onClick={() => setMobileMenuOpened(false)}  smooth offset={100} >
+                            <span>Our Projects</span>
+                        </Link>
                 <div className="m-funded-button">
-                    Start Project
+                <a href="mailto:contact@devnexts.com?subject=IT%20Company%20Inquiry%20-%20Starting%20a%20Project">Start Project</a>
+                {/* Start Project */}
                 </div>
             </div>
 
