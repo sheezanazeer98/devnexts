@@ -43,7 +43,7 @@ const OurWork = () => {
         <Slider {...settings} className="all-projects">
           {
               projectsData.map((pro,i)=>(
-                  <div className="project-item">
+                  <div className="project-item"  key={i} >
             <div className="project-info">
               <h1>  {pro.projectTitle}  </h1>
               <h2>  {pro.projectSlogan}  </h2>
