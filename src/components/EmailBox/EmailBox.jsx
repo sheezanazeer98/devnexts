@@ -34,11 +34,11 @@ const EmailBox = () => {
           setBtnText("Contact") // Clear the input field after displaying the alert
         } else {
           setBtnText("Contact")
-          alert(`Failed to Send`);
+          alert(`For additional support, please reach out to contact@devnexts.com.`);
         }
       } catch (error) {
         console.error('Error collecting email:', error);
-        alert('An error occurred while collecting the email. Please try again.');
+        alert('For additional support, please reach out to contact@devnexts.com.');
       }
     } else {
       alert('Please enter a valid email address.');
