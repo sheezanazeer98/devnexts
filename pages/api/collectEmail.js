@@ -7,32 +7,32 @@ export default async function handler(req, res) {
 
     try {
 
-      // Authenticate with Google Sheets
-      const auth = new google.auth.GoogleAuth({
-        credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS),       
-        scopes: 'https://www.googleapis.com/auth/spreadsheets',
-      });
+    //   // Authenticate with Google Sheets
+    //   const auth = new google.auth.GoogleAuth({
+    //     credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS),       
+    //     scopes: 'https://www.googleapis.com/auth/spreadsheets',
+    //   });
 
 
-      const sheets = google.sheets({ version: 'v4', auth });
+    //   const sheets = google.sheets({ version: 'v4', auth });
 
-      const spreadsheetId = '1-07Xzz-tdUtTIGfd3mTGJszOBnGpz_TWIShWgTWVQPE';
-      const range = 'Sheet1!A:B'; 
+    //   const spreadsheetId = '1-07Xzz-tdUtTIGfd3mTGJszOBnGpz_TWIShWgTWVQPE';
+    //   const range = 'Sheet1!A:B'; 
    
-      // Appending email and timestamp to the sheet
-     await sheets.spreadsheets.values.append({
-        spreadsheetId,
-        range,
-        valueInputOption: 'USER_ENTERED',
-        requestBody: {
-          values: [
-            [email, new Date().toLocaleString()], 
-          ],
-        },
-      });
+    //   // Appending email and timestamp to the sheet
+    //  await sheets.spreadsheets.values.append({
+    //     spreadsheetId,
+    //     range,
+    //     valueInputOption: 'USER_ENTERED',
+    //     requestBody: {
+    //       values: [
+    //         [email, new Date().toLocaleString()], 
+    //       ],
+    //     },
+    //   });
 
    
-      console.log("send");
+    //   console.log("send");
 
       res.status(200).json({ message: 'Email collected successfully!' });
     } catch (error) {
