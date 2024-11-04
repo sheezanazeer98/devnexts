@@ -73,6 +73,22 @@
     .wwi-right img {
         max-width: 20rem;
     }
+
+    .wwi-left .head .title {
+        text-align: left;
+        color: gray;
+    }
+
+    .wwi-feature .text {
+        color: black;
+        text-align: justify;
+    }
+
+    
+.wwi-feature .des {
+    color: var(--dark-bg);
+    font-weight: bold;
+}
 }
 
 @media (min-width: 768px) {

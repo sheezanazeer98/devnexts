@@ -3,47 +3,10 @@ import './EmailBox.css';
 import { LuMail } from 'react-icons/lu';
 import { motion } from 'framer-motion';
 import { containerVariants } from '@/src/utils/animation';
+import { Link } from 'react-scroll';
 
 const EmailBox = () => {
-  
-  const [email, setEmail] = useState('');
-  const [btnText, setBtnText] = useState('Contact');
 
-
-  const handleContactClick = async () => {
-
-    setBtnText("Sending");
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (email && emailRegex.test(email)) {
-      try {
-        // Send email to the Next.js API route
-        const response = await fetch('/api/collectEmail', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email }),
-        });
-
-        const data = await response.json();
-        if (response.ok) {
-          alert(`Thank you, ${email}! We've received your email. Our team will contact you soon. For additional support, please reach out to contact@devnexts.com.`);
-          setEmail('');
-          setBtnText("Contact") // Clear the input field after displaying the alert
-        } else {
-          setBtnText("Contact")
-          alert(`For additional support, please reach out to contact@devnexts.com.`);
-        }
-      } catch (error) {
-        console.error('Error collecting email:', error);
-        alert('For additional support, please reach out to contact@devnexts.com.');
-      }
-    } else {
-      alert('Please enter a valid email address.');
-    }
-  };
 
   return (
     <motion.div
@@ -83,8 +46,9 @@ const EmailBox = () => {
         }}
         type="email"
         placeholder="Enter Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)} // Update email state on change
+        value={"contact@devnexts.com"}
+        disabled
+// Update email state on change
       />
 
       {/* Contact Button */}
@@ -96,10 +60,13 @@ const EmailBox = () => {
           once: true,
         }}
         className="getFunded"
-        onClick={handleContactClick} // Trigger the function when clicked
+      // Trigger the function when clicked
         style={{ cursor: 'pointer' }}
       >
-        {btnText}
+
+         <Link to="f-wrapper" spy={true} smooth={true}>
+         Contact
+            </Link>
       </motion.div>
     </motion.div>
   );

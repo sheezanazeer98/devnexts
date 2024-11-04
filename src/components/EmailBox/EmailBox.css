@@ -18,6 +18,7 @@
     color: rgb(150, 150, 150);
     font-family: '__Josefin_Sans_584c1b', '__Josefin_Sans_Fallback_584c1b';
     flex: 1;
+    background-color: white !important;
 }
 
 .emailBox>input::placeholder {

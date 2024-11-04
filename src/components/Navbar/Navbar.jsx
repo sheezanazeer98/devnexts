@@ -46,9 +46,12 @@ const Navbar = () => {
                                 <span>Our Projects</span>
                             </Link>
                         </div>
+                        <Link to="f-wrapper" spy={true} smooth={true}>
                         <div className="fund-button">
-                            <a href="mailto:contact@devnexts.com?subject=IT%20Company%20Inquiry%20-%20Starting%20a%20Project">Start Project</a>
+                      
+                       Start Project
                         </div>
+                   </Link>
                     </div>
                 </div>
             </div>

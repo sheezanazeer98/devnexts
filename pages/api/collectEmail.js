@@ -3,11 +3,12 @@ import { google } from 'googleapis';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { email } = req.body;
+    const { formData } = req.body;
+
+    console.log(formData);
 
     try {
 
-      console.log(process.env.GOOGLE_TYPE);
 
       // Authenticate with Google Sheets
       const auth = new google.auth.GoogleAuth({
@@ -31,16 +32,23 @@ export default async function handler(req, res) {
       const sheets = google.sheets({ version: 'v4', auth });
 
       const spreadsheetId = '1-07Xzz-tdUtTIGfd3mTGJszOBnGpz_TWIShWgTWVQPE';
-      const range = 'Sheet1!A:B'; 
-   
-      // Appending email and timestamp to the sheet
-     await sheets.spreadsheets.values.append({
+      const range = 'Sheet1!A:F'; // Extend the range to include six columns (A through F)
+      
+      // Appending six columns of data to the sheet
+      await sheets.spreadsheets.values.append({
         spreadsheetId,
         range,
         valueInputOption: 'USER_ENTERED',
         requestBody: {
           values: [
-            [email, new Date().toLocaleString()], 
+            [
+              formData.firstName,               
+              formData.lastName,                 
+              formData.email,                   
+              formData.assistance ,             
+              formData.message,                   
+              new Date().toLocaleString(), 
+            ], 
           ],
         },
       });
