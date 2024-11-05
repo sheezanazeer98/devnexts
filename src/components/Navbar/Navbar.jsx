@@ -39,7 +39,7 @@ const Navbar = ({openModal}) => {
                                 <span>Our Values</span>
                             </Link>
                             <Link to="od-wrapper" spy smooth offset={100}>
-                                <span>What we do</span>
+                                <span>What we Offers</span>
                             </Link>
                             <Link to="hiw-wrapper" spy smooth>
                                 <span>How it works</span>
@@ -79,7 +79,7 @@ const Navbar = ({openModal}) => {
                         <span>Our Values</span>
                     </Link>
                     <Link to="od-wrapper" onClick={() => setMobileMenuOpened(false)} spy smooth offset={100}>
-                        <span>What we do</span>
+                        <span>What we Offers</span>
                     </Link>
                     <Link to="hiw-wrapper" onClick={() => setMobileMenuOpened(false)} spy smooth>
                         <span>How it works</span>

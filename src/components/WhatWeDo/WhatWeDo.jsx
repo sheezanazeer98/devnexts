@@ -17,7 +17,7 @@ const WhatWeDo = () => {
                     initial="offscreen"
                     whileInView={"onscreen"}
                     className='tag'>
-                        What We Do
+                        What We Offers
                     </motion.span>
                     <motion.span 
                     variants={titleVariants}

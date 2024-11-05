@@ -33,7 +33,7 @@ const EmailBox = ({openModal} ) => {
           once: true,
         }}
       >
-        <LuMail size={30} color="grey" />
+                 <a href="mailto:contact@devnexts.com?subject=DevNexts%20-%20Starting%20a%20Project">   <LuMail size={30} color="grey" />     </a>        
       </motion.div>
 
       {/* Input */}

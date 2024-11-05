@@ -45,7 +45,13 @@ const OurWork = () => {
               projectsData.map((pro,i)=>(
                   <div className="project-item"  key={i} >
             <div className="project-info">
-              <h1>  {pro.projectTitle}  </h1>
+              <h1>   <a
+                    href={pro.projectSite}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                 {pro.projectTitle}                      
+                  </a>  </h1>
               <h2>  {pro.projectSlogan}  </h2>
               <p className="description">
                {pro.projectDescription}

@@ -17,6 +17,7 @@
     color: #333;
     margin-bottom: 0.3rem;
     font-weight: bold;
+    text-transform: capitalize;
 }
 
 .contact-form input,

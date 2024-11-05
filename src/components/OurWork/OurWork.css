@@ -45,11 +45,12 @@
     border-bottom-left-radius: 20px;
 }
 
-.project-info h1 {
+.project-info h1 a {
     font-size: 2rem;
     font-weight: 500;
     margin-top: -5px;
     color: var(--secondary-color);
+    text-decoration:none;
 }
 
 .project-info h2 {

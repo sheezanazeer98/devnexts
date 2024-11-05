@@ -86,7 +86,7 @@ const ContactModal = ({ status, onClose }) => {
           <FaTimes className="close-icon" onClick={onClose} />
           <form onSubmit={handleSubmit} className="contact-form">
             <div className="form-group">
-              <label>First name*</label>
+              <label>First Name*</label>
               <input
                 type="text"
                 name="firstName"
@@ -97,7 +97,7 @@ const ContactModal = ({ status, onClose }) => {
             </div>
 
             <div className="form-group">
-              <label>Last name*</label>
+              <label>Last Name*</label>
               <input
                 type="text"
                 name="lastName"
@@ -108,7 +108,7 @@ const ContactModal = ({ status, onClose }) => {
             </div>
 
             <div className="form-group">
-              <label>Work email*</label>
+              <label>Work Email*</label>
               <input
                 type="email"
                 name="email"
@@ -119,7 +119,7 @@ const ContactModal = ({ status, onClose }) => {
             </div>
 
             <div className="form-group">
-              <label>How may we assist you?*</label>
+              <label>How may we serve you?*</label>
               <select
                 name="assistance"
                 value={formData.assistance}
