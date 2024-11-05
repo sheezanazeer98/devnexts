@@ -12,15 +12,26 @@ import Testimonials from '@/src/components/Testimonials/Testimonials';
 import Footer from '@/src/components/Footer/Footer';
 import OurWork from '@/src/components/OurWork/OurWork';
 import WhatWeDo from '@/src/components/WhatWeDo/WhatWeDo';
+import Modal from '@/src/components/Modal/Modal';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import { useState } from 'react';
 
 export default function Home() {
 
+  const [open, setOpen] = useState(false);
+
   const controls = useAnimation()
+
+
+  const setModal = ()=>{
+  setOpen(true);
+  }
 
   return (
     <motion.div className="app" animate={controls}>
-      <Navbar />
-      <Hero />
+      <Navbar  openModal = {setModal}   />
+      <Hero  openModal = {setModal}   />
       <BrandingVideo />
       <OurValues />
       <motion.div
@@ -54,7 +65,22 @@ export default function Home() {
       </motion.div>
       <Testimonials />
 
-      <Footer />
+      <Footer   openModal = {setModal}  />
+
+      <Modal status={open} onClose={() => setOpen(false)} />
+      <ToastContainer
+position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+/>
+
     </motion.div>
   );
 }

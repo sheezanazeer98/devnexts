@@ -31,7 +31,7 @@ const OurValues = () => {
               variants={tagVariants}
               className="tag"
             >
-              Our Value
+              Our Values
             </motion.span>
             <motion.span
               initial="offscreen"
@@ -40,7 +40,7 @@ const OurValues = () => {
               className="title"
             >
               {" "}
-              Empowering Founders with Non-Dilutive Capital and Proven Execution Excellence
+              Empowering Ideas, Enabling Success
             </motion.span>
             <motion.span
               initial="offscreen"

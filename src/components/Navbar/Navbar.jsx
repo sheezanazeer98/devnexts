@@ -4,9 +4,9 @@ import { BiMenuAltRight } from 'react-icons/bi';
 import { RxCross2 } from 'react-icons/rx';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { Link } from 'react-scroll';
-import Image from 'next/image'; // Import Image from Next.js
+import Image from 'next/image'; 
 
-const Navbar = () => {
+const Navbar = ({openModal}) => {
     const [mobileMenuOpened, setMobileMenuOpened] = useState(false);
     const [navStyle, setNavStyle] = useState("");
     const { scrollYProgress } = useScroll();
@@ -27,7 +27,9 @@ const Navbar = () => {
                     {/* left side */}
                     <div className="n-logo">
                         {/* Use next/image component for optimized images */}
+                        <Link to="h-wrapper" spy={true} smooth={true}>
                         <Image src="/logo2.png" alt="logo" width={130} height={80} priority />
+                        </Link>
                     </div>
 
                     {/* right side */}
@@ -46,12 +48,11 @@ const Navbar = () => {
                                 <span>Our Projects</span>
                             </Link>
                         </div>
-                        <Link to="f-wrapper" spy={true} smooth={true}>
-                        <div className="fund-button">
-                      
+            
+                        <div className="fund-button" onClick = {()=>{openModal()}} >
                        Start Project
                         </div>
-                   </Link>
+              
                     </div>
                 </div>
             </div>
@@ -59,8 +60,9 @@ const Navbar = () => {
             {/* mobile version */}
             <div className="nm-container">
                 {/* logo */}
-                <Image src="/logo2.png" alt="logo" width={80} height={50} priority />
-
+          
+                <Link to="h-wrapper" spy={true} smooth={true}>   <Image src="/logo2.png" alt="logo" width={80} height={50} priority /> </Link>
+               
                 {/* menu icon */}
                 {!mobileMenuOpened ? (
                     <BiMenuAltRight size={30} onClick={() => setMobileMenuOpened(true)} />
@@ -85,8 +87,8 @@ const Navbar = () => {
                     <Link to="projects" onClick={() => setMobileMenuOpened(false)} spy smooth offset={100}>
                         <span>Our Projects</span>
                     </Link>
-                    <div className="m-funded-button">
-                        <a href="mailto:contact@devnexts.com?subject=IT%20Company%20Inquiry%20-%20Starting%20a%20Project">Start Project</a>
+                    <div className="m-funded-button"  onClick = {()=>{openModal()}}  >
+                       Start Project
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@ import EmailBox from '../EmailBox/EmailBox'
 import { HeroData } from '@/src/utils/data'
 import {motion} from 'framer-motion'
 
-const Hero = () => {
+const Hero = ({openModal}) => {
 
     const variants = (delay) => ({
         initial : {
@@ -99,7 +99,7 @@ const Hero = () => {
                     <div className="h-description">
                     Delivering innovative, scalable software tailored to meet the unique needs of businesses in any industry.
                     </div>
-                    <EmailBox />
+                    <EmailBox  openModal = {openModal}  />
                 </div>
             </div>
         </div>

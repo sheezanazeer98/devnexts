@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { containerVariants } from '@/src/utils/animation';
 import { Link } from 'react-scroll';
 
-const EmailBox = () => {
+const EmailBox = ({openModal} ) => {
 
 
   return (
@@ -62,11 +62,12 @@ const EmailBox = () => {
         className="getFunded"
       // Trigger the function when clicked
         style={{ cursor: 'pointer' }}
+        onClick = {()=>{openModal()}}
       >
 
-         <Link to="f-wrapper" spy={true} smooth={true}>
+        
          Contact
-            </Link>
+           
       </motion.div>
     </motion.div>
   );
