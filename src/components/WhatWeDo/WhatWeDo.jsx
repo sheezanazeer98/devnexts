@@ -39,7 +39,22 @@ const WhatWeDo = () => {
                 {/* features */}
                 <div className="od-features">
                     {
-                        ourDiffFeatures.map((feature, i)=> (
+                        ourDiffFeatures.slice(0, 4).map((feature, i)=> (
+                            <motion.div 
+                            variants={containerVariants((i + 1) * 0.1)}
+                            initial="offscreen"
+                            whileInView="onscreen"
+                            key={i} className='od-feature'>
+                                <Image src={feature.icon} alt="feature" width={50} height={50} />
+                                <span className='sec-title'>{feature.title}</span>
+                                <span className='text'>{feature.des}</span>
+                            </motion.div>
+                        ))
+                    }
+                </div>
+                <div className="od-features">
+                    {
+                        ourDiffFeatures.slice(4, 7).map((feature, i)=> (
                             <motion.div 
                             variants={containerVariants((i + 1) * 0.1)}
                             initial="offscreen"

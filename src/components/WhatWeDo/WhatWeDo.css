@@ -28,6 +28,8 @@
 .od-features {
     display: flex;
     gap: 0.5rem;
+
+   
 }
 
 .od-feature {
@@ -58,4 +60,16 @@
         width: 80%;
         margin: auto;
     }
+}
+
+
+.test-t{
+    border : 1px solid black;
+    display: flex;
+}
+
+.test-p{
+    border : 1px solid black;
+    width : 300px;
+    
 }

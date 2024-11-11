@@ -84,6 +84,16 @@ export const ourDiffFeatures = [
     title: "AI/ML/CV/ChatGPT",
     des: "Boost productivity and accuracy with custom AI solutions, freeing you to focus on profit-driving decisions.",
   },
+  {
+    icon: "/service/Frame6.png",
+    title: "DevOps Services",
+    des: "Enhancing software development with efficient CI/CD pipelines, infrastructure as code, and robust automation solutions.",
+  },
+  {
+    icon: "/service/Frame7.png",
+    title: "Digital Marketing",
+    des: "Empowering your brand with strategic digital marketing campaigns that increase visibility and drive impactful results.",
+  },
 ];
 
 export const hitFeatures = [
