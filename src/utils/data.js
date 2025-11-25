@@ -92,12 +92,12 @@ export const ourDiffFeatures = [
   {
     icon: "/service/Frame7.png",
     title: "Digital Marketing",
-    des: "Driving measurable growth through end-to-end digital marketing—social media management, paid ads campaigns (Meta/Google/LinkedIn), content strategy, SEO, email marketing, conversion rate optimization, analytics/reporting, and ongoing performance optimization.",
+    des: "End-to-end marketing: social media management, paid ads, SEO, content, email, analytics, and optimization.",
   },
   {
     icon: "/service/Frame7.png",
     title: "US Tax & Finance Management",
-    des: "Supporting US-based companies with reliable tax and finance operations—bookkeeping, invoicing, payroll coordination, cash-flow tracking, financial reporting, and compliance-ready documentation aligned with US standards (W-9/1099 support and year-end preparation).",
+    des: "US-ready finance: bookkeeping, invoicing, payroll support, cash-flow tracking, reporting, and compliance documentation.",
   },
 ];
 
