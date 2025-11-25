@@ -54,7 +54,7 @@ const WhatWeDo = () => {
                 </div>
                 <div className="od-features">
                     {
-                        ourDiffFeatures.slice(4, 7).map((feature, i)=> (
+                        ourDiffFeatures.slice(4, 8).map((feature, i)=> (
                             <motion.div 
                             variants={containerVariants((i + 1) * 0.1)}
                             initial="offscreen"
