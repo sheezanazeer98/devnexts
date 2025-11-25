@@ -95,7 +95,7 @@ export const ourDiffFeatures = [
     des: "End-to-end marketing: social media management, paid ads, SEO, content, email, analytics, and optimization.",
   },
   {
-    icon: "/service/Frame7.png",
+    icon: "/service/Frame8.png",
     title: "US Tax & Finance Management",
     des: "US-ready finance: bookkeeping, invoicing, payroll support, cash-flow tracking, reporting, and compliance documentation.",
   },
