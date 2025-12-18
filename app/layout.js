@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* Primary Meta Tags */}
-        <title>Devnexts Technologies | AI, Blockchain & Cloud Solutions</title>
+        <title>Devnexts Technologies | Software Solution Company</title>
         <meta
           name="description"
           content="Devnexts Technologies provides enterprise-grade AI, blockchain, cloud, and custom software development services to accelerate digital growth."
@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         <meta property="og:url" content="https://www.devnexts.com/" />
         <meta
           property="og:title"
-          content="Devnexts Technologies | AI, Blockchain & Cloud Software Company"
+          content="Devnexts Technologies | Software Solution Company"
         />
         <meta
           property="og:description"
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           property="og:image"
-          content="https://media.licdn.com/dms/image/v2/D4D0BAQHH3xpquFUChg/company-logo_200_200/company-logo_200_200/0/1730576866490/dev_nexts_logo"
+          content="https://moccasin-cheerful-stingray-119.mypinata.cloud/ipfs/bafkreig5n3nwgtwfv54hw5akqvudvhiyr5mikhy52nocwkvs2gafnouph4"
         />
         <meta property="og:site_name" content="Devnexts Technologies" />
         <meta property="og:locale" content="en_US" />
@@ -60,7 +60,7 @@ export default function RootLayout({ children }) {
         />
         <meta
           name="twitter:image"
-          content="https://media.licdn.com/dms/image/v2/D4D0BAQHH3xpquFUChg/company-logo_200_200/company-logo_200_200/0/1730576866490/dev_nexts_logo"
+          content="https://moccasin-cheerful-stingray-119.mypinata.cloud/ipfs/bafkreig5n3nwgtwfv54hw5akqvudvhiyr5mikhy52nocwkvs2gafnouph4"
         />
 
         {/* SEO Keywords */}
