@@ -135,6 +135,7 @@ const ContactModal = ({ status, onClose }) => {
                 <option value="Digital Marketing">Digital Marketing</option>
                 <option value="Social Media Management">Social Media Management</option>
                 <option value="US Tax & Finance Management">US Tax & Finance Management</option>
+                <option value="other">Other</option>
               </select>
               {errors.assistance && <span className="error">{errors.assistance}</span>}
             </div>
