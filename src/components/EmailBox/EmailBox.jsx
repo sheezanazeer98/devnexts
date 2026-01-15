@@ -37,6 +37,7 @@ const EmailBox = ({openModal} ) => {
       </motion.div>
 
       {/* Input */}
+        <a href="mailto:contact@devnexts.com?subject=DevNexts%20-%20Starting%20a%20Project"> 
       <motion.input
         variants={containerVariants(0.7)}
         initial="offscreen"
@@ -55,7 +56,7 @@ const EmailBox = ({openModal} ) => {
   style={{ cursor: "pointer" }}
 // Update email state on change
       />
-
+</a>        
       {/* Contact Button */}
       <motion.div
         variants={containerVariants(0.9)}
