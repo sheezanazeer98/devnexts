@@ -43,15 +43,28 @@
   .emailBox {
     flex-wrap: wrap;
     padding-right: 1rem;
+    height: auto;
   }
 
+  /* First row: icon + email */
+  .emailBox > a,
+  .emailBox > input {
+    flex: none;
+  }
 
+  .emailBox > input {
+    width: calc(100% - 3rem); /* leave room for icon */
+    margin-left: 0.75rem;
+  }
+
+  /* Second row: button only, natural size */
   .getFunded {
     position: static;
-    width: 100%;
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
+    width: auto;
     height: auto;
-    padding: 0.75rem;
-    text-align: center;
+    padding: 0.4rem 1.5rem;
+    align-self: flex-start;
   }
 }
+
