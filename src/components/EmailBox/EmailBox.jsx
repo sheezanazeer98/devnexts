@@ -48,6 +48,11 @@ const EmailBox = ({openModal} ) => {
         placeholder="Enter Email"
         value={"contact@devnexts.com"}
         disabled
+        onClick={() => {
+    window.location.href =
+      "mailto:contact@devnexts.com?subject=DevNexts%20-%20Starting%20a%20Project";
+  }}
+  style={{ cursor: "pointer" }}
 // Update email state on change
       />
 
