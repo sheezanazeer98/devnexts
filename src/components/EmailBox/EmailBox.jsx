@@ -71,7 +71,7 @@ const EmailBox = ({openModal} ) => {
       >
 
         
-         Contact
+         Book Call
            
       </motion.div>
     </motion.div>
