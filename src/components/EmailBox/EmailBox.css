@@ -45,9 +45,6 @@
     padding-right: 1rem;
   }
 
-  .emailBox > input {
-    display: none; /* optional if you also want email hidden */
-  }
 
   .getFunded {
     position: static;
