@@ -50,7 +50,7 @@ const Navbar = ({openModal}) => {
                         </div>
             
                         <div className="fund-button" onClick = {()=>{openModal()}} >
-                       Schedule a Consultation
+                       Schedule Consultation
                         </div>
               
                     </div>
@@ -88,7 +88,7 @@ const Navbar = ({openModal}) => {
                         <span>Our Projects</span>
                     </Link>
                     <div className="m-funded-button"  onClick = {()=>{openModal()}}  >
-                       Start Project
+                       Schedule Consultation
                     </div>
                 </div>
             </div>
