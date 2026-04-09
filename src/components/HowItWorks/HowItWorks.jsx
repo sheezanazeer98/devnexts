@@ -9,13 +9,16 @@ const HowItWorks = () => {
 
     const featureVariants = {
         offscreen: {
-            scale: 0.5
+            scale: 0.9,
+            opacity: 0,
         },
         onscreen: {
             scale: 1,
+            opacity: 1,
             transition: {
-                type: "spring",
-                duration: 1.5,
+                type: "tween",
+                duration: 0.4,
+                ease: "easeOut",
             },
         },
     }
@@ -30,6 +33,7 @@ const HowItWorks = () => {
                     variants={tagVariants}
                     initial='offscreen'
                     whileInView={"onscreen"}
+                    viewport={{once: true}}
                     className='tag'
                     >
                         How it works
@@ -38,6 +42,7 @@ const HowItWorks = () => {
                     variants={titleVariants}
                     initial='offscreen'
                     whileInView={"onscreen"}
+                    viewport={{once: true}}
                     className='title'
                     >
                     Empowering your growth journey through seamless, strategic phases.
@@ -51,20 +56,23 @@ const HowItWorks = () => {
                             variants={featureVariants}
                             initial="offscreen"
                             whileInView={"onscreen"}
+                            viewport={{once: true}}
                             className='hiw-feature' 
                             key={i}>
                                 {/* left side */}
                                 <motion.div 
-                                initial={{ opacity: 0, x: -100 }}
+                                initial={{ opacity: 0, x: -40 }}
                                 whileInView={{
                                     opacity: 1,
                                     x: 0,
                                     transition: {
-                                        type: 'easeIn',
-                                        duration: 1,
-                                        delay: .7
+                                        type: 'tween',
+                                        ease: 'easeOut',
+                                        duration: 0.5,
+                                        delay: .2
                                     }
                                 }}
+                                viewport={{once: true}}
                                 className="detail"
                                 >
                                     <span className='des'>0{i+1}</span>

@@ -11,7 +11,7 @@ const BrandingVideo = () => {
         offset: ["start end", "end end"]
     })
 
-    const scale = useTransform(scrollYProgress, [0, 1], [.6, 1])
+    const scale = useTransform(scrollYProgress, [0, 1], [.85, 1])
 
   return (
     <div className="bv-container">
@@ -19,7 +19,8 @@ const BrandingVideo = () => {
             <motion.video 
             ref={ref}
             className='bv-video'
-            loop muted autoPlay controls=""
+            loop muted autoPlay playsInline
+            preload="none"
             style={{scale}}
             >
                 <source src='/video.mp4' type='video/mp4' />

@@ -1,29 +1,21 @@
 .h-wrapper {
     background-color: #fff;
-    height: 120vh;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
 .h-wrapper .container {
-    padding-top: 8rem;
-}
-
-.h-arrow {
-    position: absolute;
-    top: 6rem;
-    width: 100%;
-    max-width: 60rem;
-    z-index: 0;
+    padding-top: 6rem;
 }
 
 .h-container {
     display: flex;
-    height: 80vh;
+    min-height: 80vh;
     align-items: center;
     justify-content: space-around;
     position: relative;
 }
-
 
 /* left side styling */
 .h-left {
@@ -55,11 +47,31 @@
     overflow: hidden;
 }
 
-.person-pill-bg > img {
+.pill-content {
     width: 100%;
-    object-fit: cover;
-    scale: 2;
-    margin-top: 4rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.pill-icon {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+}
+
+.pill-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.95);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 1.1;
+    padding: 0 0.3rem;
 }
 
 .image-row > :nth-child(2) {
@@ -67,7 +79,6 @@
 }
 
 /* right side styling */
-
 .h-right {
     flex: 1.25;
     display: flex;
@@ -79,20 +90,10 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    /* color: var(--light-bg); */
-    color : var(--secondary-color);
-
-    /* background: linear-gradient(90deg, #00D32E, #02B6FE);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-
+    color: var(--secondary-color);
     font-size: 3.5rem;
     font-weight: bold;
     text-transform: uppercase;
-}
-
-.h-title>:nth-child(2) {
-    color: white;
 }
 
 .h-description {
@@ -102,22 +103,19 @@
 }
 
 @media (max-width: 1024px) {
-    .h-wrapper {
-        height: max-content;   
-    }
     .h-wrapper .container {
-        padding-top: 5rem;
+        padding-top: 9rem;
     }
     .h-container {
-        height: auto;
+        min-height: auto;
         flex-direction: column;
         align-items: center;
-        gap: 4rem;
-        padding-bottom: 3rem;
+        gap: 2.5rem;
+        padding-bottom: 2rem;
     }
 
-    .h-arrow {
-        display: none;
+    .h-left {
+        padding-top: 1rem;
     }
 
     .h-right {
@@ -128,26 +126,84 @@
     .h-title {
         align-items: center;
         font-size: 2.2rem;
+        text-align: center;
     }
 
     .h-description {
         font-size: 1.2rem;
-        width: 80%;
+        width: 85%;
         text-align: center;
     }
-    
 }
 
-@media (min-width: 768px) {
-    .h-container {
-      height: 90vh;
-    }
+@media (max-width: 768px) {
     .h-wrapper .container {
-        padding-top: 5.2rem;
+        padding-top: 8rem;
     }
-    .h-arrow {
-        max-width: 48rem;
+
+    .image-row {
+        gap: 1rem;
+    }
+
+    .person-pill {
+        height: 10rem;
+        width: 4.2rem;
+    }
+
+    .pill-icon {
+        font-size: 1.2rem;
+    }
+
+    .pill-label {
+        font-size: 0.5rem;
+    }
+
+    .image-row > :nth-child(2) {
+        transform: translateY(-2rem);
+    }
+
+    .h-left {
+        gap: 1rem;
+        padding-top: 1rem;
+    }
+
+    .h-title {
+        font-size: 1.8rem;
+        gap: 1rem;
+    }
+
+    .h-description {
+        font-size: 1rem;
+        line-height: 1.6rem;
+        width: 90%;
     }
 }
-  
-  
+
+@media (max-width: 400px) {
+    .person-pill {
+        height: 8rem;
+        width: 3.5rem;
+    }
+
+    .pill-icon {
+        font-size: 1rem;
+    }
+
+    .pill-label {
+        font-size: 0.45rem;
+    }
+
+    .image-row > :nth-child(2) {
+        transform: translateY(-1.5rem);
+    }
+
+    .h-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) and (min-width: 1025px) {
+    .h-container {
+        min-height: 90vh;
+    }
+}

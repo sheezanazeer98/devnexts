@@ -3,30 +3,38 @@
 import Navbar from '@/src/components/Navbar/Navbar';
 import './page.css'
 import Hero from '@/src/components/Hero/Hero';
-import BrandingVideo from '@/src/components/BrandingVideo/BrandingVideo';
-import OurValues from '@/src/components/OurValues/OurValues';
 import { motion, useAnimation } from 'framer-motion';
-import HowItWorks from '@/src/components/HowItWorks/HowItWorks';
-import WhoWeInvest from '@/src/components/WhoWeInvest/WhoWeInvest';
-import Testimonials from '@/src/components/Testimonials/Testimonials';
-import Footer from '@/src/components/Footer/Footer';
-import OurWork from '@/src/components/OurWork/OurWork';
-import WhatWeDo from '@/src/components/WhatWeDo/WhatWeDo';
-import Modal from '@/src/components/Modal/Modal';
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
+import dynamic from 'next/dynamic';
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const BrandingVideo = dynamic(() => import('@/src/components/BrandingVideo/BrandingVideo'), { ssr: false });
+const OurValues = dynamic(() => import('@/src/components/OurValues/OurValues'));
+const HowItWorks = dynamic(() => import('@/src/components/HowItWorks/HowItWorks'));
+const WhoWeInvest = dynamic(() => import('@/src/components/WhoWeInvest/WhoWeInvest'));
+const Testimonials = dynamic(() => import('@/src/components/Testimonials/Testimonials'));
+const Footer = dynamic(() => import('@/src/components/Footer/Footer'));
+const OurWork = dynamic(() => import('@/src/components/OurWork/OurWork'));
+const WhatWeDo = dynamic(() => import('@/src/components/WhatWeDo/WhatWeDo'));
+const Modal = dynamic(() => import('@/src/components/Modal/Modal'), { ssr: false });
+const ToastContainer = dynamic(() => import('react-toastify').then(mod => ({ default: mod.ToastContainer })), { ssr: false });
 
 export default function Home() {
 
   const [open, setOpen] = useState(false);
+  const [toastLoaded, setToastLoaded] = useState(false);
 
   const controls = useAnimation()
 
-
-  const setModal = ()=>{
-  setOpen(true);
-  }
+  const setModal = useCallback(()=>{
+    setOpen(true);
+    if (!toastLoaded) {
+      import('react-toastify/dist/ReactToastify.css');
+      setToastLoaded(true);
+    }
+  }, [toastLoaded]);
 
   return (
     <motion.div className="app" animate={controls}>
@@ -43,7 +51,7 @@ export default function Home() {
       onViewportLeave={()=> controls.start({
         backgroundColor: "white",
       })}
-      viewport={{amount: 0.4}}
+      viewport={{amount: 0.05}}
       >
         <WhatWeDo />
       </motion.div>
@@ -58,7 +66,7 @@ export default function Home() {
       onViewportLeave={()=> controls.start({
         backgroundColor: "white",
       })}
-      viewport={{amount: 0.4}}
+      viewport={{amount: 0.05}}
       >
         <WhoWeInvest />
       <OurWork/>
@@ -67,20 +75,21 @@ export default function Home() {
 
       <Footer   openModal = {setModal}  />
 
-      <Modal status={open} onClose={() => setOpen(false)} />
-      <ToastContainer
-position="top-center"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
-/>
-
+      {open && <Modal status={open} onClose={() => setOpen(false)} />}
+      {toastLoaded && (
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+      )}
     </motion.div>
   );
 }

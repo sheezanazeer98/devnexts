@@ -12,10 +12,12 @@ const EmailBox = ({ openModal }) => {
         width: '70%',
         borderRadius: '999px',
         transition: {
-          type: 'easeOut',
-          duration: 1,
+          type: 'tween',
+          ease: 'easeOut',
+          duration: 0.6,
         },
       }}
+      viewport={{once: true}}
       className="emailBox"
     >
       {/* Icon */}

@@ -16,6 +16,7 @@ const WhatWeDo = () => {
                     variants={tagVariants}
                     initial="offscreen"
                     whileInView={"onscreen"}
+                    viewport={{once: true}}
                     className='tag'>
                         What We Offers
                     </motion.span>
@@ -23,6 +24,7 @@ const WhatWeDo = () => {
                     variants={titleVariants}
                     initial="offscreen"
                     whileInView={"onscreen"}
+                    viewport={{once: true}}
                     className='title
                     '>
                         Effortless innovation, tailored solutions.
@@ -31,6 +33,7 @@ const WhatWeDo = () => {
                     variants={desVariants}
                     initial="offscreen"
                     whileInView={"onscreen"}
+                    viewport={{once: true}}
                     className='text'>
                      Our mission is to empower your digital transformation with cutting-edge technology.
                         <br /> We deliver expert web, mobile, blockchain, and DevOps solutions that are flexible, efficient, and designed to drive your success.
@@ -44,6 +47,7 @@ const WhatWeDo = () => {
                             variants={containerVariants((i + 1) * 0.1)}
                             initial="offscreen"
                             whileInView="onscreen"
+                            viewport={{once: true}}
                             key={i} className='od-feature'>
                                 <Image src={feature.icon} alt="feature" width={50} height={50} />
                                 <span className='sec-title'>{feature.title}</span>
@@ -59,6 +63,7 @@ const WhatWeDo = () => {
                             variants={containerVariants((i + 1) * 0.1)}
                             initial="offscreen"
                             whileInView="onscreen"
+                            viewport={{once: true}}
                             key={i} className='od-feature'>
                                 <Image src={feature.icon} alt="feature" width={50} height={50} />
                                 <span className='sec-title'>{feature.title}</span>

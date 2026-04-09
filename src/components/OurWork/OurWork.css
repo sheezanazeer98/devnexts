@@ -3,7 +3,6 @@
     margin-bottom: 30px;
 }
 
-
 .our-work-head {
     margin-top: 3rem !important;
 }
@@ -16,15 +15,15 @@
 
 .project-item {
     display: flex !important;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     flex-direction: row;
     width: 100%;
+    height: 380px;
     margin: 20px auto;
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-item:hover {
@@ -32,39 +31,47 @@
 }
 
 .project-info {
-    padding: 50px;
-    flex-basis: 60%;
-    height: 320px;
+    padding: 40px;
+    flex: 1;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     background-color: #fff !important;
-    color: white;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    overflow: hidden;
+}
+
+.project-info h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
 }
 
 .project-info h1 a {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-top: -5px;
+    font-size: inherit;
+    font-weight: inherit;
     color: var(--secondary-color);
-    text-decoration:none;
+    text-decoration: none;
 }
 
 .project-info h2 {
     font-size: 1.2rem;
     font-weight: 400;
-    margin-top: 25px;
+    margin-top: 15px;
     color: gray;
 }
 
 .project-info p {
-    color: white;
     margin-top: 15px;
     font-weight: 300;
     color: gray;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .project-icons {
@@ -86,115 +93,133 @@
 
 .project-icons span svg:hover {
     background-color: black;
-    
 }
 
-
-.worktag{
-    color: white !important ;
+.worktag {
+    color: white !important;
 }
-.project-img {
-    flex-basis: 60%;
-    height: 420px;
-    overflow: hidden;
-    position: relative;
+
+.project-logo-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
-.project-img:after {
-    content: '';
+.project-logo-id {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.08);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
     position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-    opacity: 0.7;
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: none;
 }
 
-.project-img img {
-    transition: transform 0.3s ease;
-    width: 105%; 
-    height: 100%;
-    object-fit: cover;  
+.project-logo-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.04em;
+    z-index: 1;
+    padding: 0 1rem;
 }
 
-.project-item:hover .project-img img {
-    transform: scale(1.1);
+.project-logo-slogan {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    z-index: 1;
+    text-align: center;
+    padding: 0 1rem;
 }
-
 
 @media (max-width: 992px) {
     .project-item {
         flex-direction: column;
+        align-items: stretch;
+        height: 480px;
     }
 
-    .project-info,
-    .project-img {
-        flex-basis: 100%;
-        border-radius: 20px;
-    }
-
-    .project__top-content h2 {
-        font-size: 1.5rem;
+    .all-projects {
+        width: 90%;
     }
 
     .project-info {
+        flex: 1;
+        padding: 25px;
         border-radius: 20px 20px 0 0;
+        overflow: hidden;
     }
 
-    .project-img {
+    .project-info p {
+        -webkit-line-clamp: 4;
+        font-size: 0.9rem;
+    }
+
+    .project-logo-panel {
+        flex: none;
+        height: 160px;
         border-radius: 0 0 20px 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .project-item {
-        flex-direction: column;
-    }
-
-    .project-info,
-    .project-img {
-        flex-basis: 100%;
-        border-radius: 20px;
-    }
-
-    .project__top-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .project-info {
-        border-radius: 20px 20px 0 0;
-    }
-
-    .project-img {
-        border-radius: 0 0 20px 20px;
+        width: 100%;
     }
 }
 
 @media (max-width: 576px) {
-    .project-info {
-        padding: 20px;
+    .project-item {
+        height: 420px;
     }
 
-    .project-info h1 {
-        font-size: 1.5rem;
+    .all-projects {
+        width: 96%;
+    }
+
+    .project-info {
+        padding: 18px;
+    }
+
+    .project-info h1,
+    .project-info h1 a {
+        font-size: 1.3rem;
     }
 
     .project-info h2 {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        margin-top: 8px;
     }
 
     .project-info p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        line-height: 1.4;
+        margin-top: 10px;
+        -webkit-line-clamp: 3;
     }
 
-    .project-icons span i {
-        font-size: 16px;
+    .project-logo-panel {
+        height: 140px;
     }
 
-    .project-img {
-        height: 200px;
+    .project-logo-title {
+        font-size: 1.2rem;
+    }
+
+    .project-logo-slogan {
+        font-size: 0.65rem;
+        letter-spacing: 0.12em;
+    }
+
+    .project-logo-id {
+        font-size: 2rem;
     }
 }

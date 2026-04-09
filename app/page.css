@@ -1,6 +1,6 @@
 .app {
     position: relative;
-    transition: all 300ms ease-out;
+    transition: background-color 0.3s ease-out;
 }
 .tag {
     color: var(--secondary-color);
@@ -40,22 +40,41 @@
 
 @media (max-width: 768px) {
     .title {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        line-height: 2.8rem;
     }
     .sec-title {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
-
     .des {
-        font-size: 1.8rem;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+    .text {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+    .tag {
+        font-size: 1.2rem;
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 480px) {
     .title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
     }
     .sec-title {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
+    }
+    .des {
+        font-size: 1.05rem;
+    }
+    .text {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+    .tag {
+        font-size: 1rem;
     }
 }

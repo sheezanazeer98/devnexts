@@ -1,14 +1,15 @@
 export const containerVariants = (delay = 0)=> ({
     "offscreen": {
         opacity: 0,
-        y: 30
+        y: 20
     },
     "onscreen": {
         opacity: 1,
         y: 0,
         transition: {
-            type: "spring",
-            duration: 2,
+            type: "tween",
+            duration: 0.5,
+            ease: "easeOut",
             delay
         }
     }
@@ -17,32 +18,19 @@ export const containerVariants = (delay = 0)=> ({
 export const tagVariants = {
     "offscreen": {
         opacity: 0,
-        y: 10
+        y: 8
     },
     "onscreen": {
         opacity: 1,
         y: 0,
         transition: {
-            type: "spring",
-            duration: 2,
+            type: "tween",
+            duration: 0.4,
+            ease: "easeOut",
         }
     }
 }
 export const titleVariants = {
-    "offscreen": {
-        opacity: 0,
-        y: 30
-    },
-    "onscreen": {
-        opacity: 1,
-        y: 0,
-        transition: {
-            type: "spring",
-            duration: 2.2,
-        }
-    }
-}
-export const desVariants = {
     "offscreen": {
         opacity: 0,
         y: 20
@@ -51,9 +39,25 @@ export const desVariants = {
         opacity: 1,
         y: 0,
         transition: {
-            type: "spring",
-            duration: 2.6,
-            delay: .2
+            type: "tween",
+            duration: 0.5,
+            ease: "easeOut",
+        }
+    }
+}
+export const desVariants = {
+    "offscreen": {
+        opacity: 0,
+        y: 15
+    },
+    "onscreen": {
+        opacity: 1,
+        y: 0,
+        transition: {
+            type: "tween",
+            duration: 0.5,
+            ease: "easeOut",
+            delay: .1
         }
     }
 }

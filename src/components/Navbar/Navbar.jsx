@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './Navbar.css';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { RxCross2 } from 'react-icons/rx';
-import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
+import { useMotionValueEvent, useScroll } from 'framer-motion';
 import { Link } from 'react-scroll';
 import Image from 'next/image'; 
 
 const Navbar = ({openModal}) => {
     const [mobileMenuOpened, setMobileMenuOpened] = useState(false);
     const [navStyle, setNavStyle] = useState("");
+    const lastStyle = useRef("");
     const { scrollYProgress } = useScroll();
     
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        if (latest > 0.2) {
-            setNavStyle("sticky");
-        } else {
-            setNavStyle("");
+        const next = latest > 0.2 ? "sticky" : "";
+        if (next !== lastStyle.current) {
+            lastStyle.current = next;
+            setNavStyle(next);
         }
     });
 
@@ -26,9 +27,8 @@ const Navbar = ({openModal}) => {
                 <div className="n-container">
                     {/* left side */}
                     <div className="n-logo">
-                        {/* Use next/image component for optimized images */}
                         <Link to="h-wrapper" spy={true} smooth={true}>
-                        <Image src="/logo2.png" alt="logo" width={130} height={80} priority />
+                        <Image src="/logo.png" alt="logo" width={130} height={100} priority />
                         </Link>
                     </div>
 
@@ -61,7 +61,7 @@ const Navbar = ({openModal}) => {
             <div className="nm-container">
                 {/* logo */}
           
-                <Link to="h-wrapper" spy={true} smooth={true}>   <Image src="/logo2.png" alt="logo" width={80} height={50} priority /> </Link>
+                <Link to="h-wrapper" spy={true} smooth={true}>   <Image src="/logo.png" alt="logo" width={80} height={62} priority /> </Link>
                
                 {/* menu icon */}
                 {!mobileMenuOpened ? (

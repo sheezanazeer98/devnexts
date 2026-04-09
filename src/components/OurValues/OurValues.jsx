@@ -2,8 +2,6 @@
 
 import React from "react";
 import "./WhatWeDo.css";
-import { features } from "@/src/utils/data";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   containerVariants,
@@ -28,6 +26,7 @@ const OurValues = () => {
             <motion.span
               initial="offscreen"
               whileInView={"onscreen"}
+              viewport={{once: true}}
               variants={tagVariants}
               className="tag"
             >
@@ -36,6 +35,7 @@ const OurValues = () => {
             <motion.span
               initial="offscreen"
               whileInView={"onscreen"}
+              viewport={{once: true}}
               variants={titleVariants}
               className="title"
             >
@@ -45,10 +45,11 @@ const OurValues = () => {
             <motion.span
               initial="offscreen"
               whileInView={"onscreen"}
+              viewport={{once: true}}
               variants={desVariants}
               className="des"
             >
-            Here’s How We Make a Difference
+            Here&apos;s How We Make a Difference
             </motion.span>
           </div>
 
@@ -60,7 +61,8 @@ const OurValues = () => {
                 <motion.div
                   initial="offscreen"
                   whileInView={"onscreen"}
-                  variants={containerVariants((1 + 1) * 0.1)}
+                  viewport={{once: true}}
+                  variants={containerVariants(0.1)}
                   className="block-feature"
                 >
                   <span>
@@ -74,7 +76,8 @@ const OurValues = () => {
                 <motion.div
                   initial="offscreen"
                   whileInView={"onscreen"}
-                  variants={containerVariants((1 + 1) * 0.1)}
+                  viewport={{once: true}}
+                  variants={containerVariants(0.15)}
                   className="block-feature"
                 >
                   <span>
@@ -86,7 +89,8 @@ const OurValues = () => {
                 <motion.div
                   initial="offscreen"
                   whileInView={"onscreen"}
-                  variants={containerVariants((1 + 1) * 0.1)}
+                  viewport={{once: true}}
+                  variants={containerVariants(0.2)}
                   className="block-feature"
                 >
                   <span>
@@ -98,7 +102,8 @@ const OurValues = () => {
                 <motion.div
                   initial="offscreen"
                   whileInView={"onscreen"}
-                  variants={containerVariants((1 + 1) * 0.1)}
+                  viewport={{once: true}}
+                  variants={containerVariants(0.25)}
                   className="block-feature"
                 >
                   <span>
