@@ -3,8 +3,7 @@
 import Navbar from '@/src/components/Navbar/Navbar';
 import './page.css'
 import Hero from '@/src/components/Hero/Hero';
-import { motion, useAnimation } from 'framer-motion';
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 
 import "slick-carousel/slick/slick.css";
@@ -25,8 +24,9 @@ export default function Home() {
 
   const [open, setOpen] = useState(false);
   const [toastLoaded, setToastLoaded] = useState(false);
+  const [ready, setReady] = useState(false);
 
-  const controls = useAnimation()
+  useEffect(() => { setReady(true); }, []);
 
   const setModal = useCallback(()=>{
     setOpen(true);
@@ -36,41 +36,28 @@ export default function Home() {
     }
   }, [toastLoaded]);
 
+  if (!ready) {
+    return (
+      <div className="page-loader">
+        <div className="loader-spinner" />
+      </div>
+    );
+  }
+
   return (
-    <motion.div className="app" animate={controls}>
+    <div className="app app-visible">
       <Navbar  openModal = {setModal}   />
       <Hero  openModal = {setModal}   />
       <BrandingVideo />
       <OurValues />
-      <motion.div
-      onViewportEnter={()=> 
-        controls.start({
-          backgroundColor: "var(--secondary-color)",
-        })
-      } 
-      onViewportLeave={()=> controls.start({
-        backgroundColor: "white",
-      })}
-      viewport={{amount: 0.05}}
-      >
+      <div className="cyan-section">
         <WhatWeDo />
-      </motion.div>
+      </div>
       <HowItWorks />
-
-      <motion.div
-      onViewportEnter={()=> 
-        controls.start({
-          backgroundColor: "var(--secondary-color)",
-        })
-      } 
-      onViewportLeave={()=> controls.start({
-        backgroundColor: "white",
-      })}
-      viewport={{amount: 0.05}}
-      >
+      <div className="cyan-section">
         <WhoWeInvest />
-      <OurWork/>
-      </motion.div>
+        <OurWork/>
+      </div>
       <Testimonials />
 
       <Footer   openModal = {setModal}  />
@@ -90,6 +77,6 @@ export default function Home() {
           theme="light"
         />
       )}
-    </motion.div>
+    </div>
   );
 }

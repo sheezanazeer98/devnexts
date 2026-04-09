@@ -45,23 +45,46 @@
   cursor: pointer;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .emailBox {
+    width: 85%;
+    flex-direction: row;
     flex-wrap: wrap;
-    padding-right: 1rem;
-    height: auto;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 1.2rem 1.5rem;
+    gap: 0.5rem;
   }
 
   .emailText {
-    width: calc(100% - 3rem);
-    margin-left: 0.75rem;
+    margin-left: 0.5rem;
+    flex: 1;
+  }
+
+  .emailLink {
+    font-size: 0.9rem;
   }
 
   .getFunded {
     position: static;
-    margin: 0.6rem auto 0;
-    width: auto;
+    width: 100%;
     height: auto;
-    padding: 0.45rem 1.5rem;
+    padding: 0.65rem 2rem;
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .emailBox {
+    width: 92%;
+    padding: 1rem;
+    border-radius: 16px;
+  }
+
+  .emailLink {
+    font-size: 0.8rem;
   }
 }

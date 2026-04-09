@@ -103,7 +103,7 @@ color: var(--light-bg);
         background-color: #fff;
         flex-direction: column;
         transform: translateX(-150%);
-        transition: all 300ms ease-in-out;
+        transition: transform 300ms ease-in-out;
         width: 100%;
         font-size: 1.2rem;
         z-index: 99;

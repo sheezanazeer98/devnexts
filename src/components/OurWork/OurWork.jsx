@@ -2,8 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 import "./OurWork.css";
 import { MdOnlinePrediction } from "react-icons/md";
-import {motion} from 'framer-motion'
-import { tagVariants, titleVariants } from '@/src/utils/animation'
 import { projectsData } from "@/src/utils/data";
 
 const GRADIENTS = [
@@ -31,39 +29,27 @@ const OurWork = () => {
   return (
     <section id="projects">
       <div className="container">
-      <div className="hiw-head  our-work-head ">
-                    <motion.span 
-                    variants={tagVariants}
-                    initial='offscreen'
-                    whileInView={"onscreen"}
-                    viewport={{once: true}}
-                    className='tag worktag'
-                    >
+      <div className="hiw-head our-work-head">
+                    <span className='tag worktag'>
                         Our Works
-                    </motion.span>
-                    <motion.span 
-                    variants={titleVariants}
-                    initial='offscreen'
-                    whileInView={"onscreen"}
-                    viewport={{once: true}}
-                    className='title'
-                    >
+                    </span>
+                    <span className='title'>
                     These are some of our recent projects
-                    </motion.span>
+                    </span>
                 </div>
         <Slider {...settings} className="all-projects">
           {
               projectsData.map((pro,i)=>(
-                  <div className="project-item"  key={i} >
+                  <div className="project-item" key={i}>
             <div className="project-info">
-              <h1>   <a
+              <h1><a
                     href={pro.projectSite}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                  {pro.projectTitle}                      
-                  </a>  </h1>
-              <h2>  {pro.projectSlogan}  </h2>
+                  </a></h1>
+              <h2>{pro.projectSlogan}</h2>
               <p className="description">
                {pro.projectDescription}
               </p>

@@ -47,6 +47,15 @@
     overflow: hidden;
 }
 
+.pill-animate {
+    animation: pillSlideUp 0.8s ease-out both;
+}
+
+@keyframes pillSlideUp {
+    from { transform: translateY(18rem); }
+    to { transform: translateY(0); }
+}
+
 .pill-content {
     width: 100%;
     height: 100%;

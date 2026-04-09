@@ -1,8 +1,6 @@
 import React from 'react'
 import './WhoWeInvest.css'
 import { whoWeInvest } from '@/src/utils/data'
-import { motion } from 'framer-motion'
-import { containerVariants, tagVariants, titleVariants } from '@/src/utils/animation'
 import { FaHandshake, FaLightbulb, FaUsers, FaTrophy } from 'react-icons/fa'
 
 const valueIcons = [FaHandshake, FaLightbulb, FaUsers, FaTrophy]
@@ -13,48 +11,30 @@ const WhoWeInvest = () => {
     <div className="wwi-wrapper">
         <div className="container">
             <div className="wwi-container">
-                {/* left side */}
                 <div className="wwi-left">
                     <div className="head">
-                        <motion.span 
-                        variants={tagVariants}
-                        initial="offscreen"
-                        whileInView={"onscreen"}
-                        viewport={{once: true}}
-                        className='tag'>
+                        <span className='tag'>
                             Who we invest in
-                        </motion.span>
-                        <motion.span 
-                        variants={titleVariants}
-                        initial="offscreen"
-                        whileInView={"onscreen"}
-                        viewport={{once: true}}
-                        className='title'>
+                        </span>
+                        <span className='title'>
                             {" "}
                             Values That Drive 
                             <br /> Us Forward
-                        </motion.span>
+                        </span>
                     </div>
 
-                    {/* features */}
                     <div className="wwi-features">
                         {
                             whoWeInvest.map((feature,i) => (
-                                <motion.div 
-                                variants={containerVariants(i * 0.05)}
-                                initial="offscreen"
-                                whileInView={"onscreen"}
-                                viewport={{once: true}}
-                                className='wwi-feature' key={i}>
+                                <div className='wwi-feature' key={i}>
                                     <span className='des'>{feature.title}</span>
                                     <span className='text'>{feature.des}</span>
-                                </motion.div>
+                                </div>
                             ))
                         }
                     </div>
                 </div>
 
-                {/* right side — floating value cards */}
                 <div className="wwi-right">
                     <div className="values-visual">
                         <div className="values-watermark">VALUES</div>
@@ -62,19 +42,15 @@ const WhoWeInvest = () => {
                             {whoWeInvest.map((val, i) => {
                                 const Icon = valueIcons[i]
                                 return (
-                                    <motion.div
+                                    <div
                                         key={i}
                                         className="value-card"
-                                        variants={containerVariants(i * 0.08 + 0.1)}
-                                        initial="offscreen"
-                                        whileInView="onscreen"
-                                        viewport={{once: true}}
                                     >
                                         <div className="value-card-icon" style={{ color: valueColors[i] }}>
                                             <Icon />
                                         </div>
                                         <span className="value-card-title">{val.title}</span>
-                                    </motion.div>
+                                    </div>
                                 )
                             })}
                         </div>

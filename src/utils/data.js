@@ -1,41 +1,41 @@
 export const ourDiffFeatures = [
   {
-    icon: "/service/Frame1.png",
+    iconName: "FaMobileAlt",
     title: "Mobile Application Development",
     des: "Crafting intuitive, high-performance mobile apps that elevate user engagement and drive business growth.",
   },
   {
-    icon: "/service/Frame2.png",
+    iconName: "FaCubes",
     title: "Blockchain Development",
     des: "Building secure, decentralized blockchain solutions that empower transparent and reliable transactions.",
   },
   {
-    icon: "/service/Frame3.png",
+    iconName: "FaCloud",
     title: "Cloud Services",
     des: "Providing robust, flexible cloud solutions to streamline operations and boost scalability.",
   },
   {
-    icon: "/service/Frame4.png",
+    iconName: "FaGlobe",
     title: "Web Application Development",
     des: "Delivering efficient, scalable web applications tailored to meet your unique business needs.",
   },
   {
-    icon: "/service/Frame5.png",
+    iconName: "FaBrain",
     title: "AI/ML/CV/ChatGPT",
     des: "Boost productivity and accuracy with custom AI solutions, freeing you to focus on profit-driving decisions.",
   },
   {
-    icon: "/service/Frame6.png",
+    iconName: "FaInfinity",
     title: "DevOps Services",
     des: "Enhancing software development with efficient CI/CD pipelines, infrastructure as code, and robust automation solutions.",
   },
   {
-    icon: "/service/Frame7.png",
+    iconName: "FaBullhorn",
     title: "Digital Marketing",
     des: "End-to-end marketing: social media management, paid ads, SEO, content, email, analytics, and optimization.",
   },
   {
-    icon: "/service/Frame8.png",
+    iconName: "FaFileInvoiceDollar",
     title: "US Tax & Finance Management",
     des: "US-ready finance: bookkeeping, invoicing, payroll support, cash-flow tracking, reporting, and compliance documentation.",
   },
@@ -43,17 +43,17 @@ export const ourDiffFeatures = [
 
 export const hitFeatures = [
   {
-    icon: "/howItWorks/frame0-(2).png",
+    iconName: "FaPaintBrush",
     title: "Design",
     des: "Creating visually engaging, user-centered designs aligned with your brand's vision.",
   },
   {
-    icon: "/howItWorks/frame0-(1).png",
+    iconName: "FaCode",
     title: "Develop",
     des: "Building scalable digital solutions with precision and performance at their core.",
   },
   {
-    icon: "/howItWorks/frame0-(3).png",
+    iconName: "FaTools",
     title: "Maintain",
     des: "Keeping your products secure, updated, and optimized for continuous growth.",
   },

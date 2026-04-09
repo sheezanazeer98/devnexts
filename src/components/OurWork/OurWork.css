@@ -7,6 +7,10 @@
     margin-top: 3rem !important;
 }
 
+#projects {
+    padding-bottom: 6rem;
+}
+
 .all-projects {
     width: 80%;
     margin: 0 auto;
